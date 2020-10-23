@@ -131,10 +131,6 @@ def add_simple_form
   generate "simple_form:install"
 end
 
-def add_action_text
-  run "rails action_text:install"
-end
-
 def stop_spring
   run "spring stop"
 end
@@ -158,7 +154,6 @@ after_bundle do
   run_figaro
   add_simple_form
   move_stripe_charges_into_javascript_packs
-  add_action_text
 
   # Migrate
   rails_command "db:create"
