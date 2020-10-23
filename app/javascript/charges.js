@@ -1,3 +1,22 @@
+// Add Stripe credentials on application.yml
+
+/*
+Create stripe.rb in app/config/initializers
+*/
+
+/*
+Add below for Stripe to work
+
+Rails.configuration.stripe = {
+  :publishable_key => ENV['stripe_publishable_key'],
+  :secret_key      => ENV['stripe_api_key']
+}
+
+Stripe.api_key = ENV['stripe_api_key']
+*/
+
+
+
 document.addEventListener("turbolinks:load", function() {
   const public_key = document.querySelector("meta[name='stripe-public-key']").content;
   const stripe = Stripe(public_key);
