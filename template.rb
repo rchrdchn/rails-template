@@ -135,6 +135,15 @@ def stop_spring
   run "spring stop"
 end
 
+def add_action_text
+  run "rails action_text:install"
+end
+
+def add_action_text_config_to_stylesheets
+  append_to_file("app/assets/stylesheets/actiontext.scss", "\n@import 'trix/dist/trix';\n")
+  append_to_file("app/assets/stylesheets/application.scss", "\n@import './actiontext.scss';\n")
+end
+
 # Main setup
 source_paths
 
@@ -153,6 +162,8 @@ after_bundle do
   copy_postcss_config
   run_figaro
   add_simple_form
+  add_action_text
+  add_action_text_config_to_stylesheets
   move_stripe_charges_into_javascript_packs
 
   # Migrate
