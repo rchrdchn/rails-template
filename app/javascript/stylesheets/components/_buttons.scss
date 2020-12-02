@@ -1,7 +1,7 @@
 // Remove what you don't need below to save on file size if you're not using Purge CSS
 
 .btn {
-  @apply font-normal text-base rounded cursor-pointer border border-transparent appearance-none inline-block select-none leading-normal antialiased align-baseline;
+  @apply font-normal text-base cursor-pointer border-transparent appearance-none inline-block select-none leading-normal antialiased align-baseline;
 
   padding: 0.35rem 0.75rem;
   transition: 0.15s ease;
@@ -32,7 +32,7 @@
 }
 
 .btn-default {
-  @apply bg-white border border-gray-400 text-gray-700;
+  @apply bg-white border-gray-400 text-gray-700;
 
   &:hover,
   &:focus {
@@ -41,7 +41,7 @@
 }
 
 .btn-white {
-  @apply bg-white text-gray-700 border-transparent border;
+  @apply bg-white text-gray-700 border-transparent;
 
   &:hover,
   &:focus {
@@ -49,11 +49,11 @@
   }
 
   &.btn-outline {
-    @apply border border-white bg-transparent text-white;
+    @apply border-white bg-transparent text-white;
 
     &:hover,
     &:focus {
-      @apply bg-white border border-white text-gray-800;
+      @apply bg-white border-white text-gray-800;
     }
   }
 }
@@ -67,7 +67,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-black border border-black;
+    @apply bg-transparent text-black border-black;
 
     &:hover,
     &:focus {
@@ -85,7 +85,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-gray-800 border border-gray-400;
+    @apply bg-transparent text-gray-800 border-gray-400;
 
     &:hover,
     &:focus {
@@ -103,7 +103,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-red-600 border border-red-600;
+    @apply bg-transparent text-red-600 border-red-600;
 
     &:hover,
     &:focus {
@@ -121,7 +121,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-orange-600 border border-orange-600;
+    @apply bg-transparent text-orange-600 border-orange-600;
 
     &:hover,
     &:focus {
@@ -139,7 +139,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-yellow-500 border border-yellow-500;
+    @apply bg-transparent text-yellow-500 border-yellow-500;
 
     &:hover,
     &:focus {
@@ -157,7 +157,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-green-600 border border-green-600;
+    @apply bg-transparent text-green-600 border-green-600;
 
     &:hover,
     &:focus {
@@ -175,7 +175,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-teal-500 border border-teal-500;
+    @apply bg-transparent text-teal-500 border-teal-500;
 
     &:hover,
     &:focus {
@@ -193,7 +193,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-blue-600 border border-blue-600;
+    @apply bg-transparent text-blue-600 border-blue-600;
 
     &:hover,
     &:focus {
@@ -211,7 +211,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-indigo-600 border border-indigo-600;
+    @apply bg-transparent text-indigo-600 border-indigo-600;
 
     &:hover,
     &:focus {
@@ -229,7 +229,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-purple-600 border border-purple-600;
+    @apply bg-transparent text-purple-600 border-purple-600;
 
     &:hover,
     &:focus {
@@ -247,7 +247,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-pink-600 border border-pink-600;
+    @apply bg-transparent text-pink-600 border-pink-600;
 
     &:hover,
     &:focus {
@@ -279,11 +279,11 @@
     @apply rounded-none;
 
     &:first-child {
-      @apply rounded-tr-none rounded-br-none border-r-0 rounded-tl rounded-bl;
+      @apply rounded-br-none border-r-0;
     }
 
     &:last-child {
-      @apply rounded-tl-none rounded-bl-none border-l-0 rounded-tr rounded-br;
+      @apply border-l-0;
     }
   }
 }
