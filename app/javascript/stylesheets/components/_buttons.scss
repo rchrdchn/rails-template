@@ -1,7 +1,7 @@
 // Remove what you don't need below to save on file size if you're not using Purge CSS
 
 .btn {
-  @apply font-normal text-base cursor-pointer border-transparent appearance-none inline-block select-none leading-normal antialiased align-baseline;
+  @apply font-normal text-base rounded cursor-pointer border border-transparent appearance-none inline-block select-none leading-normal antialiased align-baseline;
 
   padding: 0.35rem 0.75rem;
   transition: 0.15s ease;
@@ -32,7 +32,7 @@
 }
 
 .btn-default {
-  @apply bg-white border-gray-400 text-gray-700;
+  @apply bg-white border border-gray-400 text-gray-700;
 
   &:hover,
   &:focus {
@@ -41,7 +41,7 @@
 }
 
 .btn-white {
-  @apply bg-white text-gray-700 border-transparent;
+  @apply bg-white text-gray-700 border-transparent border;
 
   &:hover,
   &:focus {
@@ -49,11 +49,11 @@
   }
 
   &.btn-outline {
-    @apply border-white bg-transparent text-white;
+    @apply border border-white bg-transparent text-white;
 
     &:hover,
     &:focus {
-      @apply bg-white border-white text-gray-800;
+      @apply bg-white border border-white text-gray-800;
     }
   }
 }
@@ -67,7 +67,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-black border-black;
+    @apply bg-transparent text-black border border-black;
 
     &:hover,
     &:focus {
@@ -85,7 +85,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-gray-800 border-gray-400;
+    @apply bg-transparent text-gray-800 border border-gray-400;
 
     &:hover,
     &:focus {
@@ -103,7 +103,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-red-600 border-red-600;
+    @apply bg-transparent text-red-600 border border-red-600;
 
     &:hover,
     &:focus {
@@ -113,37 +113,37 @@
 }
 
 .btn-orange {
-  @apply bg-orange-500 text-white;
+  @apply bg-yellow-500 text-white;
 
   &:hover,
   &:focus {
-    @apply bg-orange-600;
+    @apply bg-yellow-600;
   }
 
   &.btn-outline {
-    @apply bg-transparent text-orange-600 border-orange-600;
+    @apply bg-transparent text-yellow-600 border border-yellow-600;
 
     &:hover,
     &:focus {
-      @apply bg-orange-600 text-white;
+      @apply bg-yellow-600 text-white;
     }
   }
 }
 
 .btn-yellow {
-  @apply bg-yellow-400 text-black;
+  @apply bg-yellow-300 text-black;
 
   &:hover,
   &:focus {
-    @apply bg-yellow-500;
+    @apply bg-yellow-400;
   }
 
   &.btn-outline {
-    @apply bg-transparent text-yellow-500 border-yellow-500;
+    @apply bg-transparent text-yellow-400 border border-yellow-400;
 
     &:hover,
     &:focus {
-      @apply bg-yellow-500 text-white;
+      @apply bg-yellow-400 text-white;
     }
   }
 }
@@ -157,29 +157,11 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-green-600 border-green-600;
+    @apply bg-transparent text-green-600 border border-green-600;
 
     &:hover,
     &:focus {
       @apply bg-green-600 text-white;
-    }
-  }
-}
-
-.btn-teal {
-  @apply bg-teal-500 text-white;
-
-  &:hover,
-  &:focus {
-    @apply bg-teal-600;
-  }
-
-  &.btn-outline {
-    @apply bg-transparent text-teal-500 border-teal-500;
-
-    &:hover,
-    &:focus {
-      @apply bg-teal-500 text-white;
     }
   }
 }
@@ -193,7 +175,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-blue-600 border-blue-600;
+    @apply bg-transparent text-blue-600 border border-blue-600;
 
     &:hover,
     &:focus {
@@ -211,7 +193,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-indigo-600 border-indigo-600;
+    @apply bg-transparent text-indigo-600 border border-indigo-600;
 
     &:hover,
     &:focus {
@@ -229,7 +211,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-purple-600 border-purple-600;
+    @apply bg-transparent text-purple-600 border border-purple-600;
 
     &:hover,
     &:focus {
@@ -247,7 +229,7 @@
   }
 
   &.btn-outline {
-    @apply bg-transparent text-pink-600 border-pink-600;
+    @apply bg-transparent text-pink-600 border border-pink-600;
 
     &:hover,
     &:focus {
@@ -279,11 +261,11 @@
     @apply rounded-none;
 
     &:first-child {
-      @apply rounded-br-none border-r-0;
+      @apply rounded-tr-none rounded-br-none border-r-0 rounded-tl rounded-bl;
     }
 
     &:last-child {
-      @apply border-l-0;
+      @apply rounded-tl-none rounded-bl-none border-l-0 rounded-tr rounded-br;
     }
   }
 }

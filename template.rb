@@ -72,22 +72,16 @@ def copy_templates
 end
 
 def add_tailwind
-  run "yarn add tailwindcss"
-  run "yarn add @fullhuman/postcss-purgecss"
+  # Until PostCSS 8 ships with Webpacker/Rails we need to run this compatability version
+  # See: https://tailwindcss.com/docs/installation#post-css-7-compatibility-build
+  run "yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9"
 
   run "mkdir -p app/javascript/stylesheets"
 
   append_to_file("app/javascript/packs/application.js", 'import "stylesheets/application"')
-  inject_into_file("./postcss.config.js",
-  "let tailwindcss = require('tailwindcss');\n",  before: "module.exports")
-  inject_into_file("./postcss.config.js", "\n    tailwindcss('./app/javascript/stylesheets/tailwind.config.js'),", after: "plugins: [")
+  inject_into_file("./postcss.config.js", "\n    require('tailwindcss')('./app/javascript/stylesheets/tailwind.config.js'),", after: "plugins: [")
 
   run "mkdir -p app/javascript/stylesheets/components"
-end
-
-def copy_postcss_config
-  run "rm postcss.config.js"
-  copy_file "postcss.config.js"
 end
 
 # Remove Application CSS
@@ -159,7 +153,6 @@ after_bundle do
   copy_templates
   add_tailwind
   add_friendly_id
-  copy_postcss_config
   run_figaro
   add_simple_form
   add_action_text
